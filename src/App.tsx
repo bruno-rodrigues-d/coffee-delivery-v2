@@ -1,9 +1,16 @@
-import './App.css'
+import { ThemeProvider } from 'styled-components'
+import { Header } from './components/Header'
+import { GlobalStyle } from './styles/global'
+import { defaultTheme } from './styles/themes/default'
+import { Outlet } from 'react-router-dom'
 
 export function App() {
 return (
-    <>
-      <h1>Coffee Delivery</h1>
-    </>
+  <ThemeProvider theme={defaultTheme}>
+    <GlobalStyle />
+
+    <Header />
+    <Outlet />
+  </ThemeProvider>
   )
 }

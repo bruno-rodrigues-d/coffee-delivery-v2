@@ -4,7 +4,7 @@ import { mixins } from '../../styles/mixins'
 export const Container = styled.header`
   margin: 0 auto;
   width: 1280px;
-  padding: 2rem;
+  padding: 2rem 0;
 
   display: flex;
   justify-content: space-between;

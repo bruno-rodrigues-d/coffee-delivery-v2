@@ -2,7 +2,7 @@ import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 import {
   Container,
   HeroBackground,
-  Hero,
+  Intro,
   Text,
   Topics,
   Item,
@@ -11,6 +11,7 @@ import {
   IconTimer,
   IconCoffee
 } from "./styles";
+import { Hero } from "./components/Hero";
 
 export function Home(){
   return(
@@ -18,7 +19,7 @@ export function Home(){
     <HeroBackground src="/images/hero-bg.svg" alt="Imagem do background" />
 
     <Container>
-      <Hero>
+      <Intro>
         <Text>
           <span>Encontre o café perfeito para qualquer hora do dia</span>
           <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
@@ -41,10 +42,12 @@ export function Home(){
             <span>O café chega fresquinho até você</span>
           </Item>
         </Topics>
-      </Hero>
+      </Intro>
 
       <img src="/images/hero.svg" alt="Imagem de um café" />
     </Container>
+
+    <Hero />
     </>
   )
 }

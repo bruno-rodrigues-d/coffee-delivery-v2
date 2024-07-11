@@ -20,7 +20,7 @@ export const Container = styled.main`
   align-items: center;
 `
 
-export const Hero = styled.div`
+export const Intro = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;

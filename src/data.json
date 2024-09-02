@@ -112,5 +112,6 @@
       "price": 9.90,
       "image": "/images/coffees/irlandes.png"
     }
-  ]
+  ],
+  "filters": ["tradicional", "especial", "com leite", "gelado", "alcoólico"]
 }

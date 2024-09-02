@@ -1,12 +1,19 @@
 import { CardCoffee } from "../CardCoffee";
-import { Container } from "./styles";
+import { Container, Cards, HeaderHero } from "./styles";
+
+import { Filters } from "../Filters";
 
 export function Hero() {
   return(
     <Container>
-      <span>Nossos Cafés</span>
+      <HeaderHero>
+        <span>Nossos Cafés</span>
+        <Filters />
+      </HeaderHero>
 
-      <CardCoffee />
+      <Cards>
+        <CardCoffee/>
+      </Cards>
     </Container>
   )
 }

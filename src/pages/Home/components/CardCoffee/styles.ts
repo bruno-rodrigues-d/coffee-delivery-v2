@@ -79,20 +79,20 @@ export const Price = styled.div`
   align-items: flex-end;
   gap: 0.25rem;
 
-  span.price {
+  h3.price {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 0.875rem;
 
-    ${({ theme }) => theme.colors['base-text']};
+    color: ${({ theme }) => theme.colors['base-text']};
   }
 
-  p:last-child {
+  p.price {
     font-family: 'Baloo 2';
     font-size: 1.75rem;
     font-weight: 700;
 
-    ${({ theme }) => theme.colors['base-text']};
+    color: ${({ theme }) => theme.colors['base-text']};
   }
 `
 
@@ -148,4 +148,14 @@ export const CartButton = styled.button`
   &:hover {
     background-color: ${({ theme }) => theme.colors['purple']};
   }
+`
+
+export const Tags = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+`
+
+export const Box = styled(Tags)`
 `

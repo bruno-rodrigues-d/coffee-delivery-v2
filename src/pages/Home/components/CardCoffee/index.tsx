@@ -1,6 +1,7 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { Container, Text, Tag, Footer, Price, Counter, CartButton, Tags, Box } from "./styles";
 import { coffees } from '../../../../data.json'
+import { useAppSelector } from "../../../../app/hooks";
 
 interface CardCoffeeProps {
   id: string;
@@ -12,10 +13,16 @@ interface CardCoffeeProps {
 }
 
 export function CardCoffee() {
+  const activeFilters = useAppSelector(state => state.filters.activeFilters);
+
+  const filteredItems = coffees.filter(item =>
+    activeFilters.length === 0 || item.tags.some(tag => activeFilters.includes(tag))
+  );
+
   return(
     <>
     {
-      coffees.map(({title, description, tags, price, image, id}: CardCoffeeProps)  => (
+      filteredItems.map(({title, description, tags, price, image, id}: CardCoffeeProps)  => (
         <Container key={id}>
           <img src={image} alt="café" />
 

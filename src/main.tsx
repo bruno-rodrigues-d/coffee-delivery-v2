@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client'
 import { App } from './App.tsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { Home } from './pages/Home/index.tsx'
+import { Provider } from 'react-redux'
+import { store } from './app/store.ts'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: (
+      <Provider store={store}>
+        <App />
+      </Provider>
+    ),
     children: [
       {
         path: '/',

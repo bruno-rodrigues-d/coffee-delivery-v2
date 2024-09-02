@@ -8,7 +8,7 @@ export function Hero() {
     <Container>
       <HeaderHero>
         <span>Nossos Cafés</span>
-        <Filters />
+        <Filters /> {/* TO-DO: implementar filtros com o redux */}
       </HeaderHero>
 
       <Cards>
